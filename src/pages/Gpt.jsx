@@ -32,6 +32,7 @@ export default function Gpt() {
   // 유저 입력 핸들링 함수
   const handleSubmit = (userInput) => {
     handleClickAPICall(userInput);
+    console.log('userInput', userInput);
   };
 
   // UI 구성

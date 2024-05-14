@@ -7,15 +7,15 @@ export const UserInput = ({ onSubmit }) => {
   const handleUsrInput = (e) => {
     setUserInput(e.target.value);
   };
+  const { todos } = useTodos();
+  let todolist = todos.map((todo) => todo.text);
+  console.log('todolist', todolist);
   const handleTodoClick = () => {
     onSubmit(todolist);
   };
   const handleClick = () => {
     onSubmit(userInput);
   };
-  const { todos } = useTodos();
-  let todolist = todos.map((todo) => todo.text);
-  console.log(todolist.toString());
 
   return (
     <>
@@ -57,7 +57,7 @@ export const UserInput = ({ onSubmit }) => {
             marginTop: '1rem',
           }}
         >
-          GPT 친구에게 물어보기
+          GPT에게 전달하기
         </Button>
       </div>
     </>
