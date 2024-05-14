@@ -1,0 +1,44 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0.1rem 0;
+  color: var(--color-white);
+}
+
+.checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.text {
+  flex: 1 1 0%;
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
+.text.completed {
+  text-decoration: line-through;
+  color: slategrey;
+}
+
+.button {
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.todo:hover .button {
+  visibility: visible;
+}
+
+.button svg {
+  font-size: 2.2rem;
+  color: var(--color-fire);
+}
